@@ -1,9 +1,16 @@
-#console test
+#console test over
+#console working perfectly well
 
-first_name = input("Enter your first name: ") 
-middle_name = input("state your middle name")
-last_name = input("Enter your last name: ") 
+#simple program refreshment
+a = input("a:")
+b = input("b:")
 
-print(f"Hello, {first_name} {middle_name} {last_name}! its nce to see you")
+#code input
+c = a
+a = b
+b = c
 
+#code input end
 
+print("a = " + a)
+print("b = " + b)
