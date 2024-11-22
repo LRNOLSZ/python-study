@@ -1,16 +1,7 @@
-#console test over
-#console working perfectly well
+#simple band name generator
 
-#simple program refreshment
-a = input("a:")
-b = input("b:")
-
-#code input
-c = a
-a = b
-b = c
-
-#code input end
-
-print("a = " + a)
-print("b = " + b)
+#greetings
+print("welcome to your automated band name generator")
+city = input("whats the name of your city\n")
+name_of_pet = input("what is the name of your pet\n")
+print(f"the name of your band is {city} {name_of_pet}")
