@@ -12,76 +12,54 @@
 #############################
 
 #                                  BMI                                   #
-print("this is a simple bmi calculator\n")
+#                                  BMI                                   #
+print("Welcome to the simple BMI calculator!\n")
 
-# def bmi():
-#     option = input("please select your option\n"
-#           "1. weight in KG, height in M\n"
-#           "2. weight in pounds, height in cm")
-    #pounds to kg convertor
-
-
+def calculate_bmi(weight, height):
+    # """Calculates BMI and prints the BMI category."""
+    bmi = round(weight / (height ** 2), 2)
+    if bmi <= 18.5:
+        print(f"Your BMI is {bmi}. You are underweight.")
+    elif 18.6 <= bmi <= 25:
+        print(f"Your BMI is {bmi}. You have a normal weight.")
+    elif 25.1 <= bmi <= 30:
+        print(f"Your BMI is {bmi}. You are overweight.")
+    elif 30.1 <= bmi <= 35:
+        print(f"Your BMI is {bmi}. You are obese.")
+    else:
+        print(f"Your BMI is {bmi}. You are clinically obese.")
 
 def option_1():
-        weight_pounds = int(input("please state your weight in pounds\n"))
-        height_cm = int(input("please state your height in cm\n"))
-
-        #pounds to kg convertor
-        weight = round((weight_pounds * 0.453592), 2)
-        height = float((height_cm / 100)) 
-
-        #bmi calculator
-        def bmi_calculator():
-            bmi1 = (weight/(height*height))
-            bmi_final = round(bmi1 , 2)
-            # print(height , weight)
-            # 
-            if bmi_final <= 18.5:
-                print(f"your bmi is {bmi_final}, you are under weight")    
-            elif bmi_final >= 18.6 <= 25:
-                print(f"your bmi is {bmi_final}, you are normal weight")
-            elif bmi_final >= 25.1 <= 30:
-                print(f"your bmi is {bmi_final}, you are over weight")
-            elif bmi_final >= 30.1 <= 35:
-                print(f"your bmi is {bmi_final}, you are obese")
-            else:
-                print(f"your bmi is {bmi_final}, you are clinically obese")
-
-        bmi_calculator()
-        
+    # """Handles BMI calculation using weight in pounds and height in cm."""
+    try:
+        weight_pounds = float(input("Please state your weight in pounds: "))
+        height_cm = float(input("Please state your height in cm: "))
+        weight_kg = round(weight_pounds * 0.453592, 2)
+        height_m = height_cm / 100
+        calculate_bmi(weight_kg, height_m)
+    except ValueError:
+        print("Invalid input! Please enter numeric values.")
 
 def option_2():
-        weight = float(input("please state your weight in KG\n"))
-        height = float(input("please state your height in M\n"))
+    # """Handles BMI calculation using weight in KG and height in M."""
+    try:
+        weight_kg = float(input("Please state your weight in KG: "))
+        height_m = float(input("Please state your height in M: "))
+        calculate_bmi(weight_kg, height_m)
+    except ValueError:
+        print("Invalid input! Please enter numeric values.")
 
-        def bmi_calculator():
-                bmi1 = (weight/(height*height))
-                bmi_final = round(bmi1 , 2)
-                # print(height , weight)
-                    # 
-                if bmi_final <= 18.5:
-                    print(f"your bmi is {bmi_final}, you are under weight")    
-                elif bmi_final >= 18.6 <= 25:
-                    print(f"your bmi is {bmi_final}, you are normal weight")
-                elif bmi_final >= 25.1 <= 30:
-                    print(f"your bmi is {bmi_final}, you are over weight")
-                elif bmi_final >= 30.1 <= 35:
-                    print(f"your bmi is {bmi_final}, you are obese")
-                else:
-                    print(f"your bmi is {bmi_final}, you are clinically obese")
-
-        bmi_calculator()
-        
-        
-
-option = int(input("please select your option\n"
-               "to calculate BMI\n"
-               "1. using pounds and cm\n"
-               "2. using KG and M\n"))
-
-if option == 1:
-    option_1()
-elif option == 2:
-    option_2()
-else:
-    print("invalid input")
+# Main program flow
+try:
+    option = int(input("Please select your option to calculate BMI:\n"
+                       "1. Using pounds and cm\n"
+                       "2. Using KG and M\n"
+                       "Your choice: "))
+    if option == 1:
+        option_1()
+    elif option == 2:
+        option_2()
+    else:
+        print("Invalid input! Please select option 1 or 2.")
+except ValueError:
+    print("Invalid input! Please enter 1 or 2.")
