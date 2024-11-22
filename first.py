@@ -1,7 +1,12 @@
-#simple band name generator
+#simple even or od number code
+print("this is an oddd or even number checker\n")
 
-#greetings
-print("welcome to your automated band name generator")
-city = input("whats the name of your city\n")
-name_of_pet = input("what is the name of your pet\n")
-print(f"the name of your band is {city} {name_of_pet}")
+
+def checker():   
+    number = int(input("please give your number\n"))
+    if number % 2 == 0:
+        print(f"{number} is an even number")
+    else:
+        print(f"{number} is an odd number")
+
+checker()
