@@ -66,31 +66,102 @@
 
 #               leap_year calculator                #
 
-# leap year calculator
-def leap_year(year):
-    if year % 4 == 0:
-        # print("sucess div by 4")
-        if year % 100 == 0:
-            # print("sucess div by 100")
-            if year % 400 == 0:
-                # print("sucess div by 400")
-                print(f"its a leap year")
-            else:
-                print(f"its not a leap year")
-        else:
-            print(f"its a leap year")
-    else:
-        print("this is not a leap year")
+# # leap year calculator
+# def leap_year(year):
+#     if year % 4 == 0:
+#         # print("sucess div by 4")
+#         if year % 100 == 0:
+#             # print("sucess div by 100")
+#             if year % 400 == 0:
+#                 # print("sucess div by 400")
+#                 print(f"its a leap year")
+#             else:
+#                 print(f"its not a leap year")
+#         else:
+#             print(f"its a leap year")
+#     else:
+#         print("this is not a leap year")
 
 
-#  leap year intro
-# main program flow
-try:
-    user_choice = int(input("this is a simple leap year calculator\n"
-    "please input the year u want to calculate\n"))
-    print(f"the year u inserted is {user_choice}")
-    leap_year(user_choice)
+# #  leap year intro
+# # main program flow
+# try:
+#     user_choice = int(input("this is a simple leap year calculator\n"
+#     "please input the year u want to calculate\n"))
+#     print(f"the year u inserted is {user_choice}")
+#     leap_year(user_choice)
     
 
+# except ValueError:
+#     print("input a valid year")
+
+# simple pizza ordering      #
+# introduction 
+print("this is a simple pizza ordering system\n"
+    "we have three different sizes\n"
+    "small size: 15$\n"
+    "medium size: 20$\n"
+    "large size: 25$\n")
+
+
+
+
+
+try:
+    bill = 0
+    user_choice = int(input("what size of pizza would u like to order\n"
+    "1: for small\n"
+    "2: for medium\n"
+    "3: for large size\n"))  
+# small pizza
+    if user_choice == 1:
+        bill += 15
+        pep_choice = int(input("u have selected small\n"
+            f"your current bill is {bill}\n"
+            "do u want to add peppperoni ?\n"
+            "peppperoni cost 2$\n"
+            "1: for yes \n"  "2:for no\n"))
+        if pep_choice == 1:
+            bill += 2
+            print(" thank u for your purchase\n"
+                f"your current bill is {bill}")
+        else:
+            print(" thank u for your purchase\n"
+                f"your current bill is {bill}")
+            
+# medium pizza
+    if user_choice == 2:
+        bill += 20
+        pep_choice = int(input("u have selected medium\n"
+            f"your current bill is {bill}\n"
+            "do u want to add peppperoni ?\n"
+            "peppperoni cost 3$\n"
+            "1: for yes \n"  "2:for no\n"))
+        if pep_choice == 1:
+            bill += 3
+            print(" thank u for your purchase\n"
+                f"your current bill is {bill}")
+        else:
+            print(" thank u for your purchase\n"
+                f"your current bill is {bill}")
+# large pizza
+    if user_choice == 3:
+        bill += 25
+        pep_choice = int(input("u have selected large\n"
+            f"your current bill is {bill}\n"
+            "do u want to add peppperoni ?\n"
+            "peppperoni cost 3$\n"
+            "1: for yes \n"  "2:for no\n"))
+        if pep_choice == 1:
+            bill += 3
+            print(" thank u for your purchase\n"
+                f"your current bill is {bill}")
+        else:
+            print(" thank u for your purchase\n"
+                f"your current bill is {bill}")
+        
+        
+
 except ValueError:
-    print("input a valid year")
+
+    print("please input the right options")
