@@ -95,73 +95,224 @@
 # except ValueError:
 #     print("input a valid year")
 
-# simple pizza ordering      #
+
+
+                            # simple pizza ordering      #
 # introduction 
-print("this is a simple pizza ordering system\n"
-    "we have three different sizes\n"
-    "small size: 15$\n"
-    "medium size: 20$\n"
-    "large size: 25$\n")
+# print("this is a simple pizza ordering system\n"
+#     "we have three different sizes\n"
+#     "small size: 15$\n"
+#     "medium size: 20$\n"
+#     "large size: 25$\n")
 
 
 
 
+
+# try:
+#     bill = 0
+#     user_choice = int(input("what size of pizza would u like to order\n"
+#     "1: for small\n"
+#     "2: for medium\n"
+#     "3: for large size\n"))  
+# # small pizza
+#     if user_choice == 1:
+#         bill += 15
+#         pep_choice = int(input("u have selected small\n"
+#             f"your current bill is {bill}\n"
+#             "do u want to add peppperoni ?\n"
+#             "peppperoni cost 2$\n"
+#             "1: for yes \n"  "2:for no\n"))
+#         if pep_choice == 1:
+#             bill += 2
+#             print(" thank u for your purchase\n"
+#                 f"your current bill is {bill}")
+#         else:
+#             print(" thank u for your purchase\n"
+#                 f"your current bill is {bill}")
+            
+# # medium pizza
+#     if user_choice == 2:
+#         bill += 20
+#         pep_choice = int(input("u have selected medium\n"
+#             f"your current bill is {bill}\n"
+#             "do u want to add peppperoni ?\n"
+#             "peppperoni cost 3$\n"
+#             "1: for yes \n"  "2:for no\n"))
+#         if pep_choice == 1:
+#             bill += 3
+#             print(" thank u for your purchase\n"
+#                 f"your current bill is {bill}")
+#         else:
+#             print(" thank u for your purchase\n"
+#                 f"your current bill is {bill}")
+# # large pizza
+#     if user_choice == 3:
+#         bill += 25
+#         pep_choice = int(input("u have selected large\n"
+#             f"your current bill is {bill}\n"
+#             "do u want to add peppperoni ?\n"
+#             "peppperoni cost 3$\n"
+#             "1: for yes \n"  "2:for no\n"))
+#         if pep_choice == 1:
+#             bill += 3
+#             print(" thank u for your purchase\n"
+#                 f"your current bill is {bill}")
+#         else:
+#             print(" thank u for your purchase\n"
+#                 f"your current bill is {bill}")
+        
+        
+
+# except ValueError: 
+
+#     print("please input the right options")
+
+
+            # love calculator #
+
+# try:
+#   print("welcome to the love calculator")
+#   name1 = input("what is your name\n").lower()
+#   name2 = input("what is their name\n").lower()
+
+#   combined_name = name1 + name2
+  
+#   # T
+#   t = combined_name.count("t")
+#   print(f" t occurs {t} times")
+  
+#   # R
+#   r = combined_name.count("r")
+#   print(f" r occurs {r} times")
+  
+#   # U
+#   u = combined_name.count("u")
+#   print(f" u occurs {u} times")
+
+#   # E
+#   e = combined_name.count("e")
+#   print(f" e occurs {e} times")
+
+#   # L
+#   l = combined_name.count("l")
+#   print(f" l occurs {l} times")
+
+#   # O
+#   o = combined_name.count("o")
+#   print(f" o occurs {o} times")
+
+#   # V
+#   v = combined_name.count("v")
+#   print(f" v occurs {v} times")
+
+#   # E
+#   e = combined_name.count("e")
+#   print(f" e occurs {e} times")
+
+#   true_total = t+r+u+e
+#   print(f"true = {true_total}")
+
+#   love_total = l+o+v+e
+#   print(f"love = {love_total}")
+
+#   love_score = str(true_total) + str(love_total)
+#   love_score_result = int(love_score)
+#   print(love_score_result)
+
+#   # range of love 
+#   if  love_score_result < 10 and love_score_result > 90 :
+#   # if 10 > love_score_result > 90:
+#     print(f" you go together like pepsi ")
+
+#   elif 40 < love_score_result < 50:
+#   # elif love_score_result > 40 and love_score_result < 50:
+#     print(f"you are ok together")
+#   else:
+#     print(f"you are there")
+
+# except ValueError:
+#   print("invalid input")
+      
 
 try:
-    bill = 0
-    user_choice = int(input("what size of pizza would u like to order\n"
-    "1: for small\n"
-    "2: for medium\n"
-    "3: for large size\n"))  
-# small pizza
-    if user_choice == 1:
-        bill += 15
-        pep_choice = int(input("u have selected small\n"
-            f"your current bill is {bill}\n"
-            "do u want to add peppperoni ?\n"
-            "peppperoni cost 2$\n"
-            "1: for yes \n"  "2:for no\n"))
-        if pep_choice == 1:
-            bill += 2
-            print(" thank u for your purchase\n"
-                f"your current bill is {bill}")
+
+  
+  welcome = input("welcome to the guessing game\n"
+        "Are you ready to begin\n"
+        "Yes or No\n").lower()
+  
+  
+  
+        # starting point
+  if welcome == "yes":  
+    # congratulations function
+    def congratulations(user_name):
+      return f"congratulations {user_name} u progress to the next level"
+
+    user_name = input("Before we begin what is your name\n")
+    cong_message = congratulations(user_name)
+
+  #ending function
+    def ending(user_name):
+      return f" sorry {user_name} this is the end of the line for u"
+    ending_message = ending(user_name)
+
+  #wrong function
+    def wrong_input():
+      return f"incorrect input"    
+        # Greeting
+    print(f"welcome to the game {user_name} ")
+    #question 1
+    left_right = input("Left or Right\n").lower()
+    if left_right == "left":
+      print(cong_message)
+      #Question 2
+      swim_wait = input("now do u want to swim or wait\n").lower()
+      if swim_wait == "swim":
+        print(cong_message)
+        # question 3
+        door = input("now choose which door, red or blue\n").lower()
+        if door == "red":
+          print(cong_message)
+          #Question 4
+          born_year = str(input(f"Which year were you born {user_name}\n"))
+          if 2001 <= born_year <= 2025:
+            print(cong_message)
+            #question 5
+            game_ending = input(f"do u think this is the ending {user_name}\n"
+            "Yes or no\n").lower()
+            if game_ending == "no":
+              print(cong_message)
+              print(f" Stay in touch for part 2")
+            elif game_ending == "yes":
+              print(ending_message)
+              print("Sorry, this was a trick question haha u loose")
+            else:
+              wrong_input()
+          elif born_year <= 2000 or born_year >= 2026:
+            print(ending_message)
+          else:
+            wrong_input()
+        elif door == "blue":
+          print(ending_message)
         else:
-            print(" thank u for your purchase\n"
-                f"your current bill is {bill}")
-            
-# medium pizza
-    if user_choice == 2:
-        bill += 20
-        pep_choice = int(input("u have selected medium\n"
-            f"your current bill is {bill}\n"
-            "do u want to add peppperoni ?\n"
-            "peppperoni cost 3$\n"
-            "1: for yes \n"  "2:for no\n"))
-        if pep_choice == 1:
-            bill += 3
-            print(" thank u for your purchase\n"
-                f"your current bill is {bill}")
-        else:
-            print(" thank u for your purchase\n"
-                f"your current bill is {bill}")
-# large pizza
-    if user_choice == 3:
-        bill += 25
-        pep_choice = int(input("u have selected large\n"
-            f"your current bill is {bill}\n"
-            "do u want to add peppperoni ?\n"
-            "peppperoni cost 3$\n"
-            "1: for yes \n"  "2:for no\n"))
-        if pep_choice == 1:
-            bill += 3
-            print(" thank u for your purchase\n"
-                f"your current bill is {bill}")
-        else:
-            print(" thank u for your purchase\n"
-                f"your current bill is {bill}")
-        
-        
+          wrong_input()
+      elif swim_wait == "wait":
+        print(ending_message)
+      else:
+        wrong_input()
+    elif left_right == "right":
+        print(ending_message)
+    else:
+      wrong_input()
+
+  elif welcome == "no":
+    print("that was unfortunate , see u another time")
+
+  else:
+    print("incorrect input")
+  
 
 except ValueError:
-
-    print("please input the right options")
+  print("invalid input")
